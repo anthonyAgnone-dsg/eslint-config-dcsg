@@ -1,0 +1,43 @@
+Consistent Type Imports
+// Incorrect
+import { useEffect, FC } from "react";// Correct
+import { useEffect } from "react";
+import type { FC } from "react";
+
+
+Auto Fix No Unused Vars
+// Incorrect
+function foo(x, y) {
+  return x + 1;
+}
+foo();var { foo, ...coords } = data;const [a, b] = ["a", "b"];
+console.log(b);// Correct
+function foo(x, _y) {
+  return x + 1;
+}
+foo();var { foo, ...coords } = data;const [_a, b] = ["a", "b"];
+console.log(b);
+
+
+Self Closing Comp
+// Incorrect
+<Hello name="John"></Hello>;
+<div className="content"></div>;// Correct
+<Hello name="John" />
+<div className="content" />
+
+Arrow Body Style and Arrow Parens as needed
+// Incorrect
+let foo = () => {
+    return 0;
+};
+// Correct
+let foo = () => 0
+
+// Incorrect
+let foo = (x) => {
+    return x + 1;
+};
+// Correct
+let foo = x => x + 1
+let foo = (x, y) => x + y
