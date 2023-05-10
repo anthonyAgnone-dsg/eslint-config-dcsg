@@ -9,11 +9,22 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended", // Checks rules of Hooks
   ],
-  overrides: [],
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"],
+      extends: [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/strict-boolean-expressions",
+      ],
+    },
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
+    parserOptions: {
+      project: "./tsconfig.json",
+    },
   },
   plugins: ["react", "@typescript-eslint", "simple-import-sort", "autofix"], // autofix is a custom plugin that allows for auto fixing unused variables
   rules: {
