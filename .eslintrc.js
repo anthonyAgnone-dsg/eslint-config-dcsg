@@ -20,28 +20,6 @@ module.exports = {
     "@typescript-eslint/naming-convention": [
       "error",
       { selector: "default", format: ["camelCase"] },
-      { selector: "variable", format: ["camelCase", "UPPER_CASE"] },
-      {
-        selector: "variable",
-        types: ["boolean"],
-        format: ["camelCase"],
-        prefix: ["is", "should", "has", "can", "did", "will"], // boolean variables should be prefixed with one of these
-      },
-      { selector: "class", format: ["PascalCase"] },
-      { selector: "typeLike", format: ["PascalCase"] },
-      {
-        selector: "interface",
-        format: ["PascalCase"],
-        custom: { regex: "^^(?![Is])", match: false }, // don't allow interfaces to start with "Is"
-      },
-      { selector: "namespace", format: ["PascalCase"] },
-      { selector: "enum", format: ["PascalCase"] },
-      { selector: "enumMember", format: ["PascalCase"] },
-      { selector: "typeParameter", format: ["PascalCase"] },
-      { selector: "function", format: ["camelCase"] },
-      { selector: "method", format: ["camelCase"] },
-      { selector: "property", format: ["camelCase"] },
-      { selector: "parameter", format: ["camelCase"] },
     ],
     "@typescript-eslint/strict-boolean-expressions": "error",
     "simple-import-sort/imports": "error",
