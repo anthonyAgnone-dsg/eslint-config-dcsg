@@ -12,10 +12,7 @@ module.exports = {
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
-      extends: [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/strict-boolean-expressions",
-      ],
+      extends: ["plugin:@typescript-eslint/recommended"],
     },
   ],
   parser: "@typescript-eslint/parser",
