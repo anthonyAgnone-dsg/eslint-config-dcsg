@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-dcsg",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "eslint config for dcsg",
   "main": "index.js",
   "scripts": {
